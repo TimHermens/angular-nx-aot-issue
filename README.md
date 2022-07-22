@@ -27,3 +27,7 @@ The app runs just fine when you disable AoT. But this is not desirable for produ
 ---
 
 To be able to run production mode locally, I had to introduce a hack in the [webpack.prod.config.js](./apps/mortgages-fm/src/server/webpack/webpack.prod.config.js) to override the `publicPath: 'auto'` setting to `publicPath: 'http://localhost:4201/'` because the auto setting is not supported by local browsers.
+
+## NX 14 Angular 14
+
+I have also included an implementation for NX 14 on the branch `angular14`. The exact same issue happens there as well.
