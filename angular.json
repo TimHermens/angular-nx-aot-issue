@@ -77,6 +77,26 @@
                 }
               ]
             },
+            "production-without-nrwl": {
+              "customWebpackConfig": {
+                "path": "apps/mortgages-fm/src/server/webpack/without-nrwl/webpack.prod.config.js"
+              },
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": true,
+              "serviceWorker": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/mortgages-fm/src/environments/environment.ts",
+                  "with": "apps/mortgages-fm/src/environments/environment.prod.ts"
+                }
+              ]
+            },
             "development": {
               "customWebpackConfig": {
                 "path": "apps/mortgages-fm/src/server/webpack/webpack.dev.config.js"
@@ -106,6 +126,9 @@
             },
             "production-aot-disabled": {
               "browserTarget": "mortgages-fm:build:production-aot-disabled"
+            },
+            "production-without-nrwl": {
+              "browserTarget": "mortgages-fm:build:production-without-nrwl"
             },
             "development": {
               "browserTarget": "mortgages-fm:build:development"

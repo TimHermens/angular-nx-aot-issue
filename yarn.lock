@@ -10,6 +10,26 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@angular-architects/module-federation-runtime@14.2.3":
+  version "14.2.3"
+  resolved "https://registry.yarnpkg.com/@angular-architects/module-federation-runtime/-/module-federation-runtime-14.2.3.tgz#2d8a4432f4821a5f3fd0e1087ea7737764aeb612"
+  integrity sha512-wtv8R07/MnGI8HqKPcP5mZQWegS4AmCMRLRcitjK/EnPIJSl0swIZL+eGnBXnqSaWqO/vYytkF7ZUg5JP1AKcA==
+  dependencies:
+    tslib "^2.0.0"
+
+"@angular-architects/module-federation@14.2.3":
+  version "14.2.3"
+  resolved "https://registry.yarnpkg.com/@angular-architects/module-federation/-/module-federation-14.2.3.tgz#ea0f96b89aab502f86d1e03a2999f8db378b424c"
+  integrity sha512-1+0HJLbfa4c4GgdDze0wi9qB/wx6Z8vroQc1erRr6RdRfLr4m6f+Wq6sAIvSw87cB4UCF1NEQESPEEZgmvEA0g==
+  dependencies:
+    "@angular-architects/module-federation-runtime" "14.2.3"
+    "@schematics/angular" "^13.0.4"
+    callsite "^1.0.0"
+    node-fetch "^2.6.7"
+    rxjs "~6.6.3"
+    semver "^7.3.5"
+    word-wrap "^1.2.3"
+
 "@angular-builders/custom-webpack@13.1.0":
   version "13.1.0"
   resolved "https://registry.yarnpkg.com/@angular-builders/custom-webpack/-/custom-webpack-13.1.0.tgz#854f1276204a6d3d52ad9bdab45c6ac362a158c8"
@@ -243,6 +263,18 @@
     rxjs "6.6.7"
     source-map "0.7.3"
 
+"@angular-devkit/core@13.3.9":
+  version "13.3.9"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-13.3.9.tgz#71a662feb2c3f6f79a1f27db31cb2f7021195c77"
+  integrity sha512-XqCuIWyoqIsLABjV3GQL/+EiBCt3xVPPtNp3Mg4gjBsDLW7PEnvbb81yGkiZQmIsq4EIyQC/6fQa3VdjsCshGg==
+  dependencies:
+    ajv "8.9.0"
+    ajv-formats "2.1.1"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.6.7"
+    source-map "0.7.3"
+
 "@angular-devkit/core@14.0.6":
   version "14.0.6"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-14.0.6.tgz#e2171be2b8f3b5235f07441cf11da4eaa8c454fa"
@@ -299,6 +331,17 @@
     ora "5.4.1"
     rxjs "6.6.7"
 
+"@angular-devkit/schematics@13.3.9":
+  version "13.3.9"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-13.3.9.tgz#72df522e1737fb727359e60e4d7df0fd8310b2e8"
+  integrity sha512-oNHLNtwbtEJ0dYPPXy1NpfRdSiFsYBl7+ozJklLgNV/AEOxlSi2qlVx6DoxNVjz5XgQ7Z+eoVDMw7ewGPnGSyA==
+  dependencies:
+    "@angular-devkit/core" "13.3.9"
+    jsonc-parser "3.0.0"
+    magic-string "0.25.7"
+    ora "5.4.1"
+    rxjs "6.6.7"
+
 "@angular-devkit/schematics@14.0.6":
   version "14.0.6"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-14.0.6.tgz#d0ccb5ca75de60bbc5349141a3eac820ccd4d723"
@@ -348,13 +391,6 @@
   dependencies:
     "@angular-eslint/bundled-angular-compiler" "13.5.0"
     "@typescript-eslint/experimental-utils" "5.27.1"
-
-"@angular-redux/store@^10.0.0":
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/@angular-redux/store/-/store-10.0.0.tgz#21a829a982379b48d4e8493266693beaf09a639a"
-  integrity sha512-oLaj4XSObz1jmpA2qc9WptllEDJPaM0n6AVZLP5GAWH4ytf4nc7hjb3J79xebVm/+elN3D0kyYxO9kNIFL7HYw==
-  dependencies:
-    tslib "^1.9.0"
 
 "@angular/animations@13.2.7":
   version "13.2.7"
@@ -2623,6 +2659,15 @@
     "@angular-devkit/schematics" "14.0.6"
     jsonc-parser "3.0.0"
 
+"@schematics/angular@^13.0.4":
+  version "13.3.9"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-13.3.9.tgz#51a8bff797d6b417d463eebf7ee66110453fc3ca"
+  integrity sha512-tm5wst7+Z8cOgOJ/4JVlYKOFCCOVnqKYFtYf0BIWq6RFBXcw6QqbGW1wXH8ASmuev4QZXKgqc7YKALPpYAKCeQ==
+  dependencies:
+    "@angular-devkit/core" "13.3.9"
+    "@angular-devkit/schematics" "13.3.9"
+    jsonc-parser "3.0.0"
+
 "@schematics/angular@~13.3.0":
   version "13.3.8"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-13.3.8.tgz#88daf0f4d3e2eac36e2f7933c54dd91bbea53ca9"
@@ -4333,6 +4378,11 @@ call-bind@^1.0.0, call-bind@^1.0.2:
   dependencies:
     function-bind "^1.1.1"
     get-intrinsic "^1.0.2"
+
+callsite@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/callsite/-/callsite-1.0.0.tgz#280398e5d664bd74038b6f0905153e6e8af1bc20"
+  integrity sha512-0vdNRFXn5q+dtOqjfFtmtlI9N2eVZ7LMyEV2iKC5mEEFvSg/69Ml6b/WU2qF8W1nLRa0wiSrDT3Y5jOHZCwKPQ==
 
 callsites@^3.0.0:
   version "3.1.0"
@@ -8829,7 +8879,7 @@ node-addon-api@^3.0.0, node-addon-api@^3.2.1:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.2.1.tgz#81325e0a2117789c0128dab65e7e38f07ceba161"
   integrity sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==
 
-node-fetch@2.6.7:
+node-fetch@2.6.7, node-fetch@^2.6.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
@@ -10547,7 +10597,7 @@ rxjs-for-await@0.0.2:
   resolved "https://registry.yarnpkg.com/rxjs-for-await/-/rxjs-for-await-0.0.2.tgz#26598a1d6167147cc192172970e7eed4e620384b"
   integrity sha512-IJ8R/ZCFMHOcDIqoABs82jal00VrZx8Xkgfe7TOKoaRPAW5nH/VFlG23bXpeGdrmtqI9UobFPgUKgCuFc7Lncw==
 
-rxjs@6.6.7, rxjs@^6.5.4, rxjs@^6.5.5:
+rxjs@6.6.7, rxjs@^6.5.4, rxjs@^6.5.5, rxjs@~6.6.3:
   version "6.6.7"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.7.tgz#90ac018acabf491bf65044235d5863c4dab804c9"
   integrity sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==
@@ -11619,7 +11669,7 @@ tslib@2.3.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
-tslib@2.4.0, tslib@^2, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.3.1, tslib@^2.4.0:
+tslib@2.4.0, tslib@^2, tslib@^2.0.0, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.3.1, tslib@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
