@@ -54,3 +54,5 @@ When I try to build the app `nx build mortgages-fm -c production-without-nrwl`, 
 - Angular's common bundle
 - Ionic's core bundle
 - And a bunch more
+
+It's unclear to me why this happens.
