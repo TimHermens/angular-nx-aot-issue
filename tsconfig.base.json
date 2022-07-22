@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "paths": {
-      "@core/ui-components": ["libs/ui/ui-components/src/index.ts"],
       "@core/mortgages-fm-integration": [
         "apps/mortgages-fm-integration/index.ts"
       ],
@@ -11,9 +10,8 @@
       "@core/mortgages-fm-page-fm-page2": [
         "libs/pages/mortgages-fm/fm-page2/_index/index.ts"
       ],
-      "@core/shared-translate": [
-        "libs/shared/translate/index.ts"
-      ]
+      "@core/shared-translate": ["libs/shared/translate/index.ts"],
+      "@core/ui-components": ["libs/ui/ui-components/src/index.ts"]
     },
     "rootDir": ".",
     "allowJs": true,
@@ -48,10 +46,5 @@
     "strictInjectionParameters": true,
     "disableTypeScriptVersionCheck": true
   },
-  "exclude": [
-    "**/coverage",
-    "**/dist",
-    "**/node_modules",
-    "**/tmp"
-  ]
+  "exclude": ["**/coverage", "**/dist", "**/node_modules", "**/tmp"]
 }

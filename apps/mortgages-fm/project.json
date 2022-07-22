@@ -1,0 +1,133 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "generators": {
+    "@schematics/angular:application": {
+      "strict": true
+    }
+  },
+  "sourceRoot": "apps/mortgages-fm/src",
+  "prefix": "mortgages-fm",
+  "targets": {
+    "build": {
+      "executor": "@angular-builders/custom-webpack:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/mortgages-fm/app",
+        "index": "apps/mortgages-fm/src/index.html",
+        "main": "apps/mortgages-fm/src/main.ts",
+        "polyfills": "apps/mortgages-fm/src/polyfills.ts",
+        "tsConfig": "apps/mortgages-fm/tsconfig.app.json",
+        "assets": [],
+        "allowedCommonJsDependencies": [],
+        "styles": [
+          "node_modules/@ionic/angular/css/core.css",
+          "node_modules/@ionic/angular/css/normalize.css",
+          "node_modules/@ionic/angular/css/structure.css",
+          "node_modules/@ionic/angular/css/typography.css",
+          "node_modules/@ionic/angular/css/padding.css",
+          "node_modules/@ionic/angular/css/float-elements.css",
+          "node_modules/@ionic/angular/css/text-alignment.css",
+          "node_modules/@ionic/angular/css/text-transformation.css",
+          "node_modules/@ionic/angular/css/flex-utils.css"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "customWebpackConfig": {
+            "path": "apps/mortgages-fm/src/server/webpack/webpack.prod.config.js"
+          },
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "aot": true,
+          "extractLicenses": true,
+          "vendorChunk": true,
+          "buildOptimizer": true,
+          "serviceWorker": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/mortgages-fm/src/environments/environment.ts",
+              "with": "apps/mortgages-fm/src/environments/environment.prod.ts"
+            }
+          ]
+        },
+        "production-aot-disabled": {
+          "customWebpackConfig": {
+            "path": "apps/mortgages-fm/src/server/webpack/webpack.prod.config.js"
+          },
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "aot": false,
+          "extractLicenses": true,
+          "vendorChunk": true,
+          "buildOptimizer": false,
+          "serviceWorker": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/mortgages-fm/src/environments/environment.ts",
+              "with": "apps/mortgages-fm/src/environments/environment.prod.ts"
+            }
+          ]
+        },
+        "development": {
+          "customWebpackConfig": {
+            "path": "apps/mortgages-fm/src/server/webpack/webpack.dev.config.js"
+          },
+          "preserveSymlinks": true,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "buildOptimizer": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "aot": false
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "serve": {
+      "executor": "@angular-builders/custom-webpack:dev-server",
+      "options": {
+        "port": 4201,
+        "browserTarget": "mortgages-fm:build",
+        "publicHost": "http://localhost:4201"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "mortgages-fm:build:production"
+        },
+        "production-aot-disabled": {
+          "browserTarget": "mortgages-fm:build:production-aot-disabled"
+        },
+        "development": {
+          "browserTarget": "mortgages-fm:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/mortgages-fm/**/*.ts",
+          "apps/mortgages-fm/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/mortgages-fm/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "outputs": ["coverage/apps/mortgages-fm"]
+    }
+  },
+  "tags": ["app:mortgages-fm"],
+  "implicitDependencies": []
+}

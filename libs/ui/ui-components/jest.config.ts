@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   preset: '../../../jest.preset.js',
   coverageDirectory: '../../../coverage/libs/ui/ui-components',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],

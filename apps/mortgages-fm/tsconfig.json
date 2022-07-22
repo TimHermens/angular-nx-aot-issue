@@ -2,7 +2,8 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "noUnusedParameters": true,
-    "types": ["node", "jest"]
+    "types": ["node", "jest"],
+    "target": "es2020"
   },
   "ts-node": {
     "compilerOptions": {

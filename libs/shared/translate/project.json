@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "root": "libs/shared/translate",
+  "sourceRoot": "libs/shared/translate",
+  "projectType": "library",
+  "prefix": "core",
+  "architect": {
+    "lint": {
+      "builder": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/translate/**/*.ts",
+          "libs/shared/translate/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["shared"]
+}

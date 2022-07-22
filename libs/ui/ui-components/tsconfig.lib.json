@@ -7,7 +7,6 @@
     "declaration": true,
     "inlineSources": true,
     "importHelpers": true,
-
     "lib": ["dom", "es2018"]
   },
   "angularCompilerOptions": {
@@ -15,6 +14,6 @@
     "strictMetadataEmit": true,
     "enableResourceInlining": true
   },
-  "exclude": ["**/test-setup.ts", "**/*.spec.ts"],
+  "exclude": ["**/test-setup.ts", "**/*.spec.ts", "jest.config.ts"],
   "include": ["**/*.ts"]
 }
