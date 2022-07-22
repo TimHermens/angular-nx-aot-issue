@@ -11,7 +11,7 @@
       "module": "commonjs"
     }
   },
-  "exclude": ["**/*.spec.ts", "**/test-setup.ts"],
+  "exclude": ["**/*.spec.ts", "test-setup.ts", "jest.config.js"],
   "files": ["src/main.ts", "src/polyfills.ts"],
   "include": ["**/*.ts"]
 }
