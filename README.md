@@ -5,27 +5,37 @@
 ### Scenario 1: run the app with AoT enabled (prod mode)
 
 1. Run `nx serve mortgages-fm -c production` to start the app in production mode
-2. Navigate to http://localhost:4201/mortgages-fm/fm-page2
+2. Navigate to http://localhost:4201/
 3. The error is thrown: `TypeError: Cannot read properties of undefined (reading 'ɵcmp')`, how to fix?
+
+You can also run the app with `nx serve mortgages-fm -c production-without-nrwl` which doesn't use NRWL's helper method to configure the `webpack.prod.conf.js` config file. The error is also thrown with this config.
 
 ### Scenario 2: run the app with AoT disabled
 
 The app runs just fine when you disable AoT. But this is not desirable for production builds.
 
-1. Run `nx serve mortgages-fm` to start the app in dev mode with AoT disabled
-   1. You can also try production mode with aot disabled: `nx serve mortgages-fm -c production-aot-disabled`
-2. Navigate to http://localhost:4201/mortgages-fm/fm-page2
+1. Run `nx serve mortgages-fm -c production-aot-disabled` to start the app in production mode with AoT disabled
+2. Navigate to http://localhost:4201/
 3. No error is thrown and the app works fine
 
 ### Scenario 3: exclude ui-components from the projects and run the app with AoT enabled
 
-1. Go to [angular.json](./angular.json) and remove the project `ui-components`.
+1. Open [angular.json](./angular.json) and remove the project `ui-components`.
 2. Run `nx serve mortgages-fm -c production` to start the app in production mode
-3. Navigate to http://localhost:4201/mortgages-fm/fm-page2
+3. Navigate to http://localhost:4201/
 4. No error is thrown and the app works fine
+
+### Scenario 4: exclude ui-components from the `resolve.alias` webpack config
+
+1. Open [webpack.prod.conf.js](./apps/mortgages-fm/src/server/webpack/without-nrwl/webpack.prod.config.js)
+2. Remove `'@core/ui-components'` from the shared mappings list
+3. Run `nx serve mortgages-fm -c production-without-nrwl`
+4. Navigate to http://localhost:4201/
+5. No error is thrown and the app works fine
 
 ---
 
+#### Note
 To be able to run production mode locally, I had to introduce a hack in the [webpack.prod.config.js](./apps/mortgages-fm/src/server/webpack/webpack.prod.config.js) to override the `publicPath: 'auto'` setting to `publicPath: 'http://localhost:4201/'` because the auto setting is not supported by local browsers.
 
 ## NX 14 Angular 14
