@@ -41,3 +41,16 @@ To be able to run production mode locally, I had to introduce a hack in the [web
 ## NX 14 Angular 14
 
 I have also included an implementation for NX 14 on the branch `angular14`. The exact same issue happens there as well.
+
+There is one weird difference going on between the Angular 13 and Angular 14 version when you try to run the app with the manual webpack config: `nx serve mortgages-fm -c production-without-nrwl`. In Angular 14 you will see a different runtime error:
+
+```
+Error: Cannot find module '@angular/platform-browser'
+```
+
+When I try to build the app `nx build mortgages-fm -c production-without-nrwl`, I can see plenty of essential core bundles missing, such as:
+
+- Angular's platform browser bundle
+- Angular's common bundle
+- Ionic's core bundle
+- And a bunch more
