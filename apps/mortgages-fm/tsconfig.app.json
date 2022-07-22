@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc/apps/mortgages-fm",
+    "resolveJsonModule": true,
+    "types": ["node", "jest"],
+    "target": "es2015"
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "exclude": ["**/*.spec.ts", "**/test-setup.ts"],
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": ["**/*.ts"]
+}

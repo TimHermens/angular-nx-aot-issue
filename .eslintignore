@@ -1,0 +1,6 @@
+**/dist/*
+**/tmp/*
+**/*.min.js
+**/*.d.ts
+**/core.ui.js
+**/config/*.conf.js

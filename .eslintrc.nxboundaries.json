@@ -1,0 +1,30 @@
+{
+  "depConstraints": [
+    {
+      "sourceTag": "feature",
+      "onlyDependOnLibsWithTags": ["feature", "shared"]
+    },
+    {
+      "sourceTag": "shared",
+      "onlyDependOnLibsWithTags": ["shared"]
+    },
+    {
+      "sourceTag": "app:mortgages-fm",
+      "onlyDependOnLibsWithTags": [
+        "page:mortgages-fm",
+        "config:mortgages-fm",
+        "environment:mortgages-fm",
+        "shared"
+      ]
+    },
+    {
+      "sourceTag": "page:mortgages-fm",
+      "onlyDependOnLibsWithTags": [
+        "page:mortgages-fm",
+        "environment:mortgages-fm",
+        "feature",
+        "shared"
+      ]
+    }
+  ]
+}

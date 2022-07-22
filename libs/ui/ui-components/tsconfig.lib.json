@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../dist/out-tsc/libs/ui/ui-components",
+    "target": "es2015",
+    "moduleResolution": "node",
+    "declaration": true,
+    "inlineSources": true,
+    "importHelpers": true,
+
+    "lib": ["dom", "es2018"]
+  },
+  "angularCompilerOptions": {
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "enableResourceInlining": true
+  },
+  "exclude": ["**/test-setup.ts", "**/*.spec.ts"],
+  "include": ["**/*.ts"]
+}

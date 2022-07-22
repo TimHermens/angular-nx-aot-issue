@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../../../dist/out-tsc/libs/pages/mortgages-fmfm-page1",
+    "module": "commonjs",
+    "types": ["node", "jest"],
+    "resolveJsonModule": true,
+    "preserveSymlinks": true,
+    "allowJs": true
+  },
+  "include": ["**/*.spec.ts", "**/*.d.ts"]
+}

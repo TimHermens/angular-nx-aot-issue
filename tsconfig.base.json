@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@core/ui-components": ["libs/ui/ui-components/src/index.ts"],
+      "@core/mortgages-fm-integration": [
+        "apps/mortgages-fm-integration/index.ts"
+      ],
+      "@core/mortgages-fm-page-fm-page1": [
+        "libs/pages/mortgages-fm/fm-page1/_index/index.ts"
+      ],
+      "@core/mortgages-fm-page-fm-page2": [
+        "libs/pages/mortgages-fm/fm-page2/_index/index.ts"
+      ],
+      "@core/shared-translate": [
+        "libs/shared/translate/index.ts"
+      ]
+    },
+    "rootDir": ".",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "declaration": false,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2017", "esnext.asynciterable", "esnext.array", "es2020"],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "module": "esnext",
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "resolveJsonModule": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "noUnusedParameters": true
+    }
+  },
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "enableResourceInlining": false,
+    "fullTemplateTypeCheck": true,
+    "skipTemplateCodegen": true,
+    "strictInjectionParameters": true,
+    "disableTypeScriptVersionCheck": true
+  },
+  "exclude": [
+    "**/coverage",
+    "**/dist",
+    "**/node_modules",
+    "**/tmp"
+  ]
+}
